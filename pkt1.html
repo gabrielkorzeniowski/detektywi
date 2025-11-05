@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Punkt 1 – Kawiarnia „U Palety”</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #EFE6D8;
+      --paper: #FFFDF6;
+      --accent: #8B0000;
+      --text: #222;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      font-family: "Montserrat", sans-serif;
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      padding: 16px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: "Special Elite", monospace;
+      font-size: 22px;
+      margin: 0;
+    }
+
+    .back {
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .record {
+      background: var(--paper);
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+      padding: 14px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      font-family: "Special Elite", monospace;
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: var(--accent);
+    }
+
+    .meta, .details, .evidence, .attachments {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .meta strong {
+      display: inline-block;
+      width: 190px;
+    }
+
+    .quote {
+      font-family: "Special Elite", monospace;
+      background: rgba(139, 0, 0, 0.06);
+      border-left: 3px solid var(--accent);
+      padding: 6px 10px;
+      margin: 8px 0;
+      font-size: 13px;
+    }
+
+    .attachments img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 8px;
+      border: 2px solid rgba(0,0,0,0.1);
+      margin: 6px 0;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Punkt 1 – Kawiarnia „U Palety”</h1>
+    <a href="miejsca.html" class="back">⬅ Powrót do miejsc</a>
+  </header>
+
+  <section class="record">
+    <h2>Dane punktu</h2>
+    <div class="meta">
+      <strong>Lokalizacja:</strong> ul. Karmelicka 22<br>
+      <strong>Czas oględzin:</strong> 15.05.2025, godz. 08:45<br>
+      <strong>Funkcjonariusz prowadzący:</strong> asp. szt. J. Bielski
+    </div>
+
+    <h2>Osoba przesłuchana</h2>
+    <div class="details">
+      <strong>Jan Rogowski</strong> – barman, lat 38.<br><br>
+      Potwierdza obecność Leona Borkowskiego w lokalu dnia 14.05 ok. godz. 19:00.<br>
+      W towarzystwie Klary Rybak (asystentki).<br>
+      Ok. 19:45 do kawiarni weszła Anna Borkowska, żona zaginionego, po czym natychmiast wyszła.<br>
+      Około 20:15 pojawił się Marek Domański, prowadzący galerię – doszło do kłótni o pieniądze.<br>
+      Około 20:30 Leon opuścił lokal sam.
+    </div>
+
+    <h2>Materiały / dowody zabezpieczone</h2>
+    <div class="evidence">
+      • Paragon z terminala – transakcja kartą Leona o godz. 19:12.<br>
+      • Kieliszek po winie – ślady czerwonego pigmentu (prawdopodobnie farba z dłoni).<br>
+      • Serwetka z notatką: „Nie ufaj mu. – K.” (atrament niebieski).
+    </div>
+
+    <h2>Załączniki</h2>
+    <div class="attachments">
+      <p>Zdjęcie stolika z kawiarni (z kieliszkiem i serwetką):</p>
+      <img src="images/punkt1_stolik.jpg" alt="Zdjęcie stolika z kawiarni">
+
+      <p>Kopia paragonu z terminala:</p>
+      <img src="images/punkt1_paragon.jpg" alt="Kopia paragonu z terminala">
+
+      <p>Wizytówka galerii „Sfera”:</p>
+      <img src="images/punkt1_wizytowka.jpg" alt="Wizytówka galerii Sfera">
+    </div>
+  </section>
+</body>
+</html>

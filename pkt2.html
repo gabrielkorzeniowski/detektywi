@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Punkt 2 – Galeria „Sfera”</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #EFE6D8;
+      --paper: #FFFDF6;
+      --accent: #8B0000;
+      --text: #222;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      font-family: "Montserrat", sans-serif;
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      padding: 16px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: "Special Elite", monospace;
+      font-size: 22px;
+      margin: 0;
+    }
+
+    .back {
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .record {
+      background: var(--paper);
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+      padding: 14px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      font-family: "Special Elite", monospace;
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: var(--accent);
+    }
+
+    .meta, .details, .evidence, .attachments {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .meta strong {
+      display: inline-block;
+      width: 190px;
+    }
+
+    .attachments img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 8px;
+      border: 2px solid rgba(0,0,0,0.1);
+      margin: 6px 0;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Punkt 2 – Galeria „Sfera”</h1>
+    <a href="miejsca.html" class="back">⬅ Powrót do miejsc</a>
+  </header>
+
+  <section class="record">
+    <h2>Dane punktu</h2>
+    <div class="meta">
+      <strong>Lokalizacja:</strong> ul. Dietla 103<br>
+      <strong>Czas oględzin:</strong> 15.05.2025, godz. 11:30<br>
+      <strong>Funkcjonariusz prowadzący:</strong> mł. insp. K. Dębski
+    </div>
+
+    <h2>Osoba przesłuchana</h2>
+    <div class="details">
+      <strong>Marek Domański</strong> – właściciel galerii.<br><br>
+      Potwierdza, że Leon przyjechał o godz. 20:45 w dniu 14.05.<br>
+      Kłócili się o ubezpieczenie obrazu „Cisza po burzy”.<br>
+      Leon miał być w złym stanie emocjonalnym.<br>
+      O 21:00 wyszedł, a Marek „został poprawić oświetlenie”.<br>
+      Monitoring z tej nocy – brak zapisu (usterka systemu).
+    </div>
+
+    <h2>Materiały / dowody zabezpieczone</h2>
+    <div class="evidence">
+      • Karta dostępu do galerii (z odciskiem palca Borkowskiego).<br>
+      • Fragment płótna z obrazu znaleziony przy drzwiach technicznych.<br>
+      • Kabel USB – przypuszczalnie od systemu monitoringu (brak danych).
+    </div>
+
+    <h2>Załączniki</h2>
+    <div class="attachments">
+      <p>Zdjęcie wejścia do galerii:</p>
+      <img src="images/punkt2_wejscie.jpg" alt="Zdjęcie wejścia do galerii">
+
+      <p>Fragment płótna w kopercie dowodowej:</p>
+      <img src="images/punkt2_plotno.jpg" alt="Fragment płótna w kopercie dowodowej">
+
+      <p>Wydruk dziennika elektronicznego z systemu (brak wpisów między 20:30 a 21:45):</p>
+      <img src="images/punkt2_dziennik.jpg" alt="Wydruk dziennika elektronicznego z systemu">
+    </div>
+  </section>
+</body>
+</html>

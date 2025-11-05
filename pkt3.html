@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Punkt 3 – Skwer Sztuki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #EFE6D8;
+      --paper: #FFFDF6;
+      --accent: #8B0000;
+      --text: #222;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      font-family: "Montserrat", sans-serif;
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      padding: 16px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: "Special Elite", monospace;
+      font-size: 22px;
+      margin: 0;
+    }
+
+    .back {
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .record {
+      background: var(--paper);
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+      padding: 14px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      font-family: "Special Elite", monospace;
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: var(--accent);
+    }
+
+    .meta, .details, .evidence, .attachments {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .meta strong {
+      display: inline-block;
+      width: 190px;
+    }
+
+    .attachments img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 8px;
+      border: 2px solid rgba(0,0,0,0.1);
+      margin: 6px 0;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Punkt 3 – Skwer Sztuki</h1>
+    <a href="miejsca.html" class="back">⬅ Powrót do miejsc</a>
+  </header>
+
+  <section class="record">
+    <h2>Dane punktu</h2>
+    <div class="meta">
+      <strong>Lokalizacja:</strong> plac przy ul. Rajskiej, przy rzeźbie „Muza z ogniem”<br>
+      <strong>Czas oględzin:</strong> 15.05.2025, godz. 13:00<br>
+      <strong>Funkcjonariusz prowadzący:</strong> asp. A. Sieradzka
+    </div>
+
+    <h2>Osoba przesłuchana</h2>
+    <div class="details">
+      <strong>Klara Rybak</strong> – malarka, była asystentka.<br><br>
+      Potwierdza spotkanie z Leonem w kawiarni w dniu 14.05.<br>
+      Twierdzi, że rozmawiali o planowanej wystawie we Włoszech.<br>
+      Wyszła przed nim, ok. 20:15.<br>
+      Widziana przez świadka w pobliżu galerii około 21:00 (nie potwierdza tego).<br>
+      Posiada bilet lotniczy do Florencji (data wylotu – 16.05).
+    </div>
+
+    <h2>Materiały / dowody zabezpieczone</h2>
+    <div class="evidence">
+      • Kopia biletu lotniczego (imię i nazwisko Klary Rybak).<br>
+      • Notatnik szkiców – zawiera rysunek kobiety z pierścionkiem o błękitnym kamieniu.<br>
+      • SMS z telefonu Leona do Klary: „Nie możemy już się spotykać. Ona wie.”
+    </div>
+
+    <h2>Załączniki</h2>
+    <div class="attachments">
+      <p>Fotografia rzeźby „Muza z ogniem” (miejsce spotkań artystów):</p>
+      <img src="images/punkt3_rzezba.jpg" alt="Rzeźba 'Muza z ogniem'">
+
+      <p>Kopia biletu do Florencji:</p>
+      <img src="images/punkt3_bilet.jpg" alt="Kopia biletu do Florencji">
+
+      <p>Strona z notatnika z rysunkiem pierścionka:</p>
+      <img src="images/punkt3_notatnik.jpg" alt="Strona z notatnika z rysunkiem pierścionka">
+    </div>
+  </section>
+</body>
+</html>

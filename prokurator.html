@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt do prokuratora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #EFE6D8;
+      --paper: #FFFDF6;
+      --accent: #8B0000;
+      --text: #222;
+    }
+
+    html, body { margin:0; padding:0; height:100%; }
+    body {
+      background: var(--bg);
+      font-family: "Montserrat", sans-serif;
+      color: var(--text);
+      padding: 16px;
+    }
+
+    header { text-align:center; margin-bottom:16px; }
+    h1 { font-family:"Special Elite", monospace; font-size:22px; margin:0; }
+    .back { display:inline-block; margin-top:6px; font-size:14px; color:#444; text-decoration:none; }
+
+    .file {
+      background: var(--paper);
+      border-radius: 12px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+      padding: 14px;
+      border: 1px solid rgba(0,0,0,0.05);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    label { display:block; font-weight:600; margin-bottom:6px; }
+    input[type=text], textarea {
+      width:100%;
+      padding:10px;
+      border-radius:8px;
+      border:1px solid rgba(0,0,0,0.08);
+      font-size:14px;
+      box-sizing:border-box;
+      background:#fff;
+      margin-bottom:12px;
+    }
+    textarea { min-height:120px; resize:vertical; }
+
+    .small { font-size:13px; color:#555; margin-top:8px; }
+    .status { margin-top:10px; font-size:14px; text-align:center; }
+    .btn {
+      display:block;
+      width:100%;
+      padding:12px;
+      border-radius:8px;
+      background:#8B0000;
+      color:#fff;
+      border:none;
+      cursor:pointer;
+      font-weight:600;
+      font-family:"Montserrat", sans-serif;
+      transition:background 0.3s;
+    }
+    .btn:hover {
+      background:#a31212;
+    }
+
+    .success {
+      display:none;
+      background:#e6f4ea;
+      color:#0a592a;
+      border:1px solid #9ed4a5;
+      border-radius:8px;
+      padding:1rem;
+      text-align:center;
+      font-weight:600;
+      margin-bottom:1.5rem;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kontakt do prokuratora</h1>
+    <a href="index.html" class="back">⬅ Powrót do teczki</a>
+  </header>
+
+  <section class="file">
+    <h2 style="font-family:Special Elite; font-size:16px; border-left:3px solid var(--accent); padding-left:6px">
+      Wydział Kryminalny – KM Policji w TG.
+    </h2>
+
+    <form id="prokuratorForm">
+      <div class="success" id="successMsg">Raport został pomyślnie wysłany do prokuratora.</div>
+
+      <label for="nazwa">Nazwa jednostki detektywistycznej</label>
+      <input type="text" id="nazwa" name="nazwa" placeholder="Wpisz nazwę patrolu..." required>
+
+      <label for="tresc">Treść wiadomości</label>
+      <textarea id="tresc" name="tresc" placeholder="Opisz ustalenia, raport w sprawie dla prokuratora..." required></textarea>
+
+      <button type="submit" class="btn">Wyślij teraz</button>
+      <div class="status" id="status">Status: oczekiwanie...</div>
+    </form>
+  </section>
+
+  <!-- ✅ EmailJS SDK v4 (działa globalnie, bez importu modułowego) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    const SERVICE_ID = "service_duc0jwc";
+    const TEMPLATE_ID = "template_n7ewdw2";
+    const PUBLIC_KEY = "csPz9N4BIaXXTEfRc";
+
+    emailjs.init({ publicKey: PUBLIC_KEY });
+
+    const form = document.getElementById("prokuratorForm");
+    const msg = document.getElementById("successMsg");
+    const statusEl = document.getElementById("status");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const nazwa = document.getElementById("nazwa").value.trim();
+      const tresc = document.getElementById("tresc").value.trim();
+
+      if (!nazwa || !tresc) {
+        statusEl.textContent = "Uzupełnij wszystkie pola przed wysłaniem.";
+        return;
+      }
+
+      statusEl.textContent = "Wysyłanie wiadomości...";
+
+      emailjs.send(SERVICE_ID, TEMPLATE_ID, { nazwa, tresc })
+        .then(() => {
+          msg.style.display = "block";
+          statusEl.textContent = "Wiadomość wysłana pomyślnie.";
+          form.reset();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        })
+        .catch((error) => {
+          console.error("EmailJS error:", error);
+          statusEl.textContent = "Błąd wysyłki — spróbuj ponownie.";
+        });
+    });
+  </script>
+</body>
+</html>

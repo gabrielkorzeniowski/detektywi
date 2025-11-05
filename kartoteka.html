@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kartoteka osób podejrzanych</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#EFE6D8;
+      --paper:#FFFDF6;
+      --accent:#8B0000;
+      --shadow: rgba(0,0,0,0.18);
+      --text:#222;
+    }
+    html,body{height:100%;margin:0;padding:0;}
+    body{
+      background:var(--bg);
+      font-family:"Montserrat",sans-serif;
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      padding:16px;
+    }
+
+    header{
+      text-align:center;
+      margin-bottom:16px;
+    }
+
+    h1{
+      font-family:"Special Elite", monospace;
+      font-size:22px;
+      margin:0;
+    }
+    .back{
+      text-decoration:none;
+      display:inline-block;
+      margin-top:6px;
+      font-size:14px;
+      color:#444;
+    }
+
+    .suspect{
+      background:var(--paper);
+      border-radius:12px;
+      box-shadow:0 6px 14px rgba(0,0,0,0.06);
+      padding:14px;
+      margin-bottom:16px;
+      border:1px solid rgba(0,0,0,0.05);
+    }
+
+    .suspect-header{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      margin-bottom:10px;
+    }
+    .suspect-header img{
+      width:80px;
+      height:80px;
+      object-fit:cover;
+      border-radius:8px;
+      border:2px solid rgba(0,0,0,0.1);
+    }
+
+    .name{
+      font-weight:700;
+      font-size:16px;
+      margin-bottom:4px;
+    }
+    .relation{
+      color:#555;
+      font-size:13px;
+    }
+
+    .desc{
+      font-size:14px;
+      margin:6px 0;
+      line-height:1.4;
+    }
+
+    .quote{
+      font-family:"Special Elite", monospace;
+      background:rgba(139,0,0,0.06);
+      border-left:3px solid var(--accent);
+      padding:6px 10px;
+      margin:8px 0;
+      font-size:13px;
+    }
+
+    .motive{
+      font-size:13px;
+      color:#333;
+      font-weight:500;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kartoteka osób podejrzanych</h1>
+    <a href="index.html" class="back">⬅ Powrót do teczki</a>
+  </header>
+
+  <!-- Anna Borkowska -->
+  <section class="suspect">
+    <div class="suspect-header">
+      <img src="images/anna_borkowska.jpg" alt="Anna Borkowska">
+      <div>
+        <div class="name">Anna Borkowska</div>
+        <div class="relation">żona</div>
+      </div>
+    </div>
+    <div class="desc">
+      42 lata, projektantka wnętrz.<br>
+      Elegancka, opanowana, perfekcjonistka.<br>
+      Od miesięcy w małżeństwie z Leonem narastał chłód i zazdrość.<br>
+      Widziała go ostatni raz wieczorem przed zaginięciem.<br>
+      Twierdzi, że „Leon często znikał, by szukać inspiracji”.
+    </div>
+    <div class="quote">„Nie jestem odpowiedzialna za jego chaos.”</div>
+    <div class="motive">Motyw: zazdrość, urażona duma, lęk przed rozwodem.</div>
+  </section>
+
+  <!-- Marek Domański -->
+  <section class="suspect">
+    <div class="suspect-header">
+      <img src="images/marek_domanski.jpg" alt="Marek Domański">
+      <div>
+        <div class="name">Marek Domański</div>
+        <div class="relation">właściciel galerii</div>
+      </div>
+    </div>
+    <div class="desc">
+      45 lat, dawny przyjaciel Borkowskiego.<br>
+      Człowiek interesu, który zawsze potrafi zrobić zysk z talentu innych.<br>
+      Ostatnio jego galeria miała poważne długi – wernisaż Leona miał ją uratować.<br>
+      Tego wieczoru widziano ich w ostrym sporze o pieniądze.
+    </div>
+    <div class="quote">„Niech pan nie robi ze mnie potwora – ja tylko chciałem, żeby wystawa się odbyła.”</div>
+    <div class="motive">Motyw: pieniądze, ubezpieczenie obrazu, desperacja finansowa.</div>
+  </section>
+
+  <!-- Klara Rybak -->
+  <section class="suspect">
+    <div class="suspect-header">
+      <img src="images/klara_rybak.jpg" alt="Klara Rybak">
+      <div>
+        <div class="name">Klara Rybak</div>
+        <div class="relation">asystentka i była uczennica</div>
+      </div>
+    </div>
+    <div class="desc">
+      29 lat, utalentowana, ambitna, impulsywna.<br>
+      Romans z Leonem zakończył się skandalem w środowisku artystycznym.<br>
+      Mimo to planowali wspólny wyjazd na wystawę do Włoch.<br>
+      Twierdzi, że była z nim w kawiarni tego wieczoru, a potem wróciła do domu.
+    </div>
+    <div class="quote">„On był geniuszem… ale też człowiekiem, który nie potrafił niczego dokończyć.”</div>
+    <div class="motive">Motyw: zawiedzione uczucia, chęć odwetu lub chęć ucieczki.</div>
+  </section>
+
+  <!-- Helena Wrona -->
+  <section class="suspect">
+    <div class="suspect-header">
+      <img src="images/helena_wrona.jpg" alt="Helena Wrona">
+      <div>
+        <div class="name">Helena Wrona</div>
+        <div class="relation">kolekcjonerka sztuki</div>
+      </div>
+    </div>
+    <div class="desc">
+      56 lat, znana w środowisku jako ekscentryczna mecenaska.<br>
+      Ceniła Leona, ale nie zawsze rozumiała jego pracę.<br>
+      Chciała kupić obraz „Cisza po burzy”, jednak artysta odmówił sprzedaży.
+    </div>
+    <div class="quote">„Niektórzy artyści są bardziej dramatyczni niż ich obrazy.”</div>
+    <div class="motive">Motyw: chciwość, urażona duma, obsesja na punkcie konkretnego dzieła.</div>
+  </section>
+
+  <!-- Jan Rogowski -->
+  <section class="suspect">
+    <div class="suspect-header">
+      <img src="images/jan_rogowski.jpg" alt="Jan Rogowski">
+      <div>
+        <div class="name">Jan Rogowski</div>
+        <div class="relation">barman z kawiarni „U Palety”</div>
+      </div>
+    </div>
+    <div class="desc">
+      38 lat, dawniej student ASP, dziś prowadzi popularną kawiarnię artystyczną.<br>
+      Znał Leona od lat, był jego nieoficjalnym „spowiednikiem”.<br>
+      Był świadkiem kłótni z Markiem i napiętej sceny z Anną.
+    </div>
+    <div class="quote">„Widziałem, że ten wieczór nie skończy się dobrze.”</div>
+    <div class="motive">Motyw: znał tajemnice wszystkich. Czy za dużo wiedział?</div>
+  </section>
+
+</body>
+</html>

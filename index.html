@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teczka sprawy kryminalnej</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#EFE6D8;
+      --folder:#C69C6D;
+      --paper:#FFFDF6;
+      --accent:#8B0000;
+      --shadow: rgba(0,0,0,0.18);
+      --text:#222;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      -webkit-font-smoothing:antialiased;
+      color:var(--text);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+
+    .folder-wrap{
+      width:100%;
+      max-width:420px;
+      transform:translateZ(0);
+    }
+
+    .folder{
+      background: var(--folder);
+      border-radius:14px;
+      box-shadow: 0 18px 30px var(--shadow), 0 6px 10px rgba(0,0,0,0.06) inset;
+      padding:18px;
+      position:relative;
+      overflow:visible;
+    }
+
+    .tab{
+      position:absolute;
+      left:18px;
+      top:-22px;
+      background:var(--folder);
+      padding:8px 16px;
+      border-radius:8px 8px 6px 6px;
+      font-weight:700;
+      box-shadow:0 8px 14px rgba(0,0,0,0.12);
+      font-size:14px;
+      letter-spacing:1px;
+    }
+
+    .file-card{
+      margin-top:8px;
+      background:var(--paper);
+      border-radius:10px;
+      padding:14px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+      border:1px solid rgba(0,0,0,0.04);
+    }
+
+    .file-header{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .badge{
+      font-family:"Special Elite", monospace;
+      font-size:12px;
+      background:transparent;
+      color:var(--accent);
+      border:2px dashed rgba(139,0,0,0.08);
+      padding:6px 8px;
+      border-radius:6px;
+      letter-spacing:1px;
+    }
+
+    h1{
+      margin:0;
+      font-size:18px;
+      line-height:1;
+    }
+
+    p.lead{
+      margin:6px 0 0 0;
+      font-size:13px;
+      color:#4b4b4b;
+    }
+
+    .links{
+      margin-top:12px;
+      display:grid;
+      gap:10px;
+    }
+
+    .link-item{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:12px 14px;
+      border-radius:8px;
+      background:#f7f7f7;
+      text-decoration:none;
+      color:var(--text);
+      border:1px solid rgba(0,0,0,0.04);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.04);
+      transition:transform .12s ease, box-shadow .12s ease;
+    }
+    .link-item:active{transform:translateY(2px)}
+    .link-left{display:flex;gap:12px;align-items:center}
+    .icon{
+      width:44px;height:44px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:700;background:#fff;border:1px solid rgba(0,0,0,0.04);
+      font-family:"Special Elite", monospace;
+      color:#333;
+    }
+
+    .link-text{font-weight:600}
+    .link-sub{font-size:12px;color:#666;margin-top:2px;font-weight:400}
+
+    .staple{
+      position:absolute;
+      right:3px;
+      top:6px;
+      width:64px;
+      height:64px;
+      border-radius:50%;
+      background:transparent;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:36px;
+      color:#6b4a23;
+      transform:rotate(-12deg);
+      opacity:.9;
+    }
+
+    .meta{
+      margin-top:12px;font-size:12px;color:#666;text-align:center;
+    }
+
+    @media (max-width:360px){
+      .tab{left:12px;padding:6px 12px;font-size:13px}
+      .icon{width:40px;height:40px}
+      .staple{width:50px;height:50px;font-size:28px}
+    }
+  </style>
+</head>
+<body>
+  <main class="folder-wrap">
+    <article class="folder" role="application" aria-label="Teczka sprawy kryminalnej">
+      <div class="tab">TECZKA #342-17</div>
+      <div class="staple">📎</div>
+
+      <section class="file-card">
+        <div class="file-header">
+          <div class="badge">ŚCIŚLE TAJNE</div>
+          <div style="flex:1">
+            <h1>Zaginięcie Leona Borkowskiego</h1>
+            <p class="lead">Numer akt: 342/17</p>
+          </div>
+        </div>
+
+        <nav class="links" aria-label="Nawigacja teczki">
+          <a class="link-item" href="kartoteka.html">
+            <div class="link-left">
+              <div class="icon">K</div>
+              <div>
+                <div class="link-text">Kartoteka osób podejrzanych</div>
+                <div class="link-sub">Lista osób podejrzanych, zdjęcia, profil</div>
+              </div>
+            </div>
+            <div aria-hidden="true">›</div>
+          </a>
+
+          <a class="link-item" href="opis.html">
+            <div class="link-left">
+              <div class="icon">O</div>
+              <div>
+                <div class="link-text">Opis sprawy</div>
+                <div class="link-sub">Opis początkowy sprawy i początkowe materiały</div>
+              </div>
+            </div>
+            <div aria-hidden="true">›</div>
+          </a>
+
+          <a class="link-item" href="miejsca.html">
+            <div class="link-left">
+              <div class="icon">M</div>
+              <div>
+                <div class="link-text">Miejsca powiązane</div>
+                <div class="link-sub">Mapa miejsc w których uzyskasz więcej informacji w sprawie.</div>
+              </div>
+            </div>
+            <div aria-hidden="true">›</div>
+          </a>
+
+          <a class="link-item" href="prokurator.html">
+            <div class="link-left">
+              <div class="icon">P</div>
+              <div>
+                <div class="link-text">Kontakt do prokuratora</div>
+                <div class="link-sub">Napisz wiadomość e-mail z odpowiedzią</div>
+              </div>
+            </div>
+            <div aria-hidden="true">›</div>
+          </a>
+        </nav>
+
+        <p class="meta">Otwórz dowolną podstronę, by przejrzeć materiały.</p>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
